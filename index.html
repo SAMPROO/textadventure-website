@@ -8,9 +8,20 @@
   </head>
   <body>
 
+    <nav>
+      <p onclick="handleClick('#about')">About the game</p>
+      <p onclick="handleClick('#story')">The story</p>
+      <p onclick="handleClick('#we')">Who are we?</p>
+      <p onclick="handleClick('#contact')">Contact</p>
+    </nav>
+
+    <script type="text/javascript">
+    const handleClick = (id) => {
+      console.log('pöö: ',id)
+    }
+    </script>
+
     <div class="wrapper">
-      <h1>Peek a Boo!</h1>
-    </div>
 
     <div class="terminal">
       <div class="top-bar">
@@ -20,9 +31,9 @@
         Adventure starts here ...
         <br/>
         <br/>
-        <br/>
         START NOW!
       </span>
     </div>
+  </div>
   </body>
 </html>
