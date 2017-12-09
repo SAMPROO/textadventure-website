@@ -5,6 +5,7 @@
     <title>The Orphanage</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Roboto|VT323" rel="stylesheet">
+    <script src="js/jquery.min.js" charset="utf-8"></script>
   </head>
   <body>
 
@@ -17,7 +18,10 @@
 
     <script type="text/javascript">
     const handleClick = (id) => {
-      console.log('pöö: ',id)
+      console.log(id)
+      $('html, body').animate({
+          scrollTop: $(id).offset().top
+      }, 500);
     }
     </script>
 
@@ -34,6 +38,11 @@
         START NOW!
       </span>
     </div>
+
+    <div class="test" id="about">About the game! Stuff</div>
+    <div class="test" id="story">Story is the best bart simpson!</div>
+    <div class="test" id="we">we are from sweden</div>
+    <div class="test" id="contact">hello@yourmom.fi</div>
   </div>
   </body>
 </html>
