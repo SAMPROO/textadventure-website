@@ -9,18 +9,30 @@
     <!-- import external js - f12a2877-81df-40ba-9389-92e6a7189297 -->
     <script src="js/jquery.min.js" charset="utf-8"></script>
     <script src="js/typed.min.js" charset="utf-8"></script>
+
+    <script>
+    // Fade
+    $(document).ready(function () {
+    setTimeout(function(){ $(".bvideo").css('opacity','1'); },2000)
+    });
+    </script>
   </head>
   <body>
+
+    <video autoplay="autoplay" muted="muted" class="bvideo" loop="loop" >
+    <source src="images/particles.mp4" type="video/mp4">
+    </video>
 
     <nav>
 
       <a onclick="handleClick('#hero')" class="logo"><span>The</span><br/>Orphanage</a>
       |
-      <a onclick="handleClick('#about')">About the game</a> |
-      <a onclick="handleClick('#story')">The story</a> |
+      <a onclick="handleClick('#play')">Play</a> |
+      <a onclick="handleClick('#about')">About</a> |
+      <a onclick="handleClick('#story')">Story</a> |
       <a onclick="handleClick('#we')">Who are we?</a> |
       <a onclick="handleClick('#contact')">Contact</a>
-      <a class="button" href="https://github.com/SAMPROO/textadventure-website">Download</a>
+      <a class="button" href="https://github.com/SAMPROO/textadventure-game">Download</a>
     </nav>
     <script type="text/javascript">
     const handleClick = (id) => {
@@ -40,6 +52,7 @@
           <span class="cmdulr">></span> ^1000 Your choices and interactions will determine the outcome of the game. ^100 <br/><br/>
           <span class="cmdulr">> </span>
         </p>
+
       </div>
 
 
@@ -59,24 +72,62 @@
           cursorChar: '|',
         });
       </script>
+    <div class="terminal">
+      <div class="top-bar" id="play">Play<img class="cmd_pic" src="images/cmd_pick.jpg" alt=""></div>
+      <span>
+        <span class="cmdulr">></span><br>
+        <span class="cmdulr">></span><br>
+        <span class="cmdulr">></span><br>
+        <span class="cmdulr">></span><br>
+
+      </span>
+
+    </div>
+
+
 
     <div class="terminal">
-      <div class="top-bar">
-        TEXT ADVENTURE GAME
-      </div>
+      <div class="top-bar" id="about">About<img class="cmd_pic" src="images/cmd_pick.jpg" alt=""></div>
       <span>
-        Adventure starts here ...
-        <br/>
-        <br/>
-        START NOW!
+        <span class="cmdulr">></span><br>
+        <span class="cmdulr">></span><br>
+        <span class="cmdulr">></span><br>
       </span>
     </div>
 
-    <div class="test" id="about">About the game! Stuff</div>
-    <div class="test" id="story">Story is the best bart simpson!</div>
-    <div class="test" id="we">we are from sweden</div>
-    <div class="test" id="contact">hello@yourmom.fi</div>
+    <div class="terminal">
+      <div class="top-bar" id="story">Story<img class="cmd_pic" src="images/cmd_pick.jpg" alt=""></div>
+      <span>
+        <span class="cmdulr">></span><br>
+        <span class="cmdulr">></span><br>
+        <span class="cmdulr">></span><br>
+        <span class="cmdulr">></span><br>
 
-  </div>
+      </span>
+    </div>
+
+    <div class="terminal">
+      <div class="top-bar" id="we">Who are we?<img class="cmd_pic" src="images/cmd_pick.jpg" alt=""></div>
+      <span>
+        <span class="cmdulr">></span><br>
+        <span class="cmdulr">></span><br>
+        <span class="cmdulr">></span><br>
+        <span class="cmdulr">></span><br>
+      </span>
+    </div>
+
+    <div class="terminal">
+      <div class="top-bar" id="contact">Contact<img class="cmd_pic" src="images/cmd_pick.jpg" alt=""></div>
+      <span>
+        <span class="cmdulr">></span><br>
+        <span class="cmdulr">></span><br>
+        <span class="cmdulr">></span><br>
+        <span class="cmdulr">></span><br>
+      </span>
+    </div>
+
+    <div class="contacts">
+    </div>
+
   </body>
 </html>

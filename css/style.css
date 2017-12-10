@@ -1,8 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  background: radial-gradient(#14374a, #071922);
   display:flex; flex-direction:row;
+  background: #000;
+}
+
+body .video{
+  position: fixed; top: 0; right: 0; left: 0;
 }
 h1 {
   color: #fff;
@@ -78,8 +82,8 @@ nav .button:hover{
   width: 100vw;
   max-width: 100%;
 }
+
 .hero{
-  background: #0A0A0A;
   padding: 10vw;
   width: 80vw;
   max-width: calc(100% - 20vw);
@@ -92,6 +96,8 @@ nav .button:hover{
 }
 .terminal{
   padding: calc(5vw + 1rem + 16px) 5vw 5vw;
+  width: 600px;
+  height: 300px;
   margin: 4.2vw;
   background: #0a0a0a;
   border-radius: 1px;
@@ -111,6 +117,9 @@ nav .button:hover{
   color: #000;
   font-family: 'Roboto', sans-serif;
 }
+.cmd_pic{
+  position: absolute; right: 0; top: 0;
+}
 .test{
   min-height: 100vh;
   color: #fff;
@@ -129,4 +138,13 @@ nav .button:hover{
     50% {opacity: 0;}
     90% {opacity: 0;}
     100% {opacity: 1;}
+}
+.bvideo
+{ position: fixed;    top: 50%;    left: 50%;    min-width: 100%;    min-height: 100%;    width: auto;    height: auto;    z-index: -100;    -ms-transform: translateX(-50%) translateY(-50%);    -moz-transform: translateX(-50%) translateY(-50%);    -webkit-transform: translateX(-50%) translateY(-50%);    transform: translateX(-50%) translateY(-50%);    opacity:0; transition: opacity 1.42s;}
+
+.contacts{
+  position: bottom: 0; right: 0; left: 0;
+  background: #0A0A0A;
+  width: 100%;
+  height: 300px;
 }
