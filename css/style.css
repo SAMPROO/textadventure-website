@@ -17,13 +17,14 @@ p, span, a{
 }
 nav{
   position: fixed; top: 0; right: 0; left: 0;
-  background: #02122b;
+  background: linear-gradient(#000, #000);
   padding: 5px 20px;
   height: 50px;
+  color: #888;
   display:flex; flex-direction:row; align-items: center;
 }
 nav a {
-  color: #C93E44;
+  color: #fff;
   cursor: pointer;
   margin: 0 15px;
   height: 57px;
@@ -31,12 +32,25 @@ nav a {
   border-bottom: 0px solid #02122b;
   display:flex; flex-direction:column; justify-content:center; align-items:center; align-content: center;
 }
-nav a:hover{
-  color: #fff;
-  border-bottom: 4px solid #fff;
+nav a:not(.logo):not(.button):hover{
+  color: #C93E44;
+  border-bottom: 4px solid #C93E44;
+}
+nav .logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0 100px 0 0;
+    line-height: 0.5;
+    text-align: left;
+    align-items: flex-start;
+}
+nav .logo span {
+  font-size: 0.8rem;
+  margin: 0;
+  line-height: 0;
 }
 nav .button{
-  background: red;
+  background: #0c2939;
   margin: 0;
   height: 40px;
   padding: 10px 25px;
@@ -64,11 +78,11 @@ nav .button:hover{
   max-width: 100%;
 }
 .hero{
-  background: #0a0a0a;
+  background: #0A0A0A;
   padding: 10vw;
   width: 80vw;
-  max-width: calc(100% - 20vw)
-  height: calc(42vh - 20vw);
+  max-width: calc(100% - 20vw);
+  height: calc(100vh - 20vw);
 }
 .terminal{
   padding: calc(5vw + 1rem + 16px) 5vw 5vw;
@@ -79,7 +93,7 @@ nav .button:hover{
 }
 .terminal span {
   font-size: 0.9rem;
-  color: #eee;
+  color: #aaa;
 }
 .top-bar{
   padding: 8px;

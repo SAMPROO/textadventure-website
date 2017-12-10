@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Roboto|VT323" rel="stylesheet">
 
-    <!-- import external js -->
+    <!-- import external js - f12a2877-81df-40ba-9389-92e6a7189297 -->
     <script src="js/jquery.min.js" charset="utf-8"></script>
     <script src="js/typed.min.js" charset="utf-8"></script>
   </head>
@@ -14,9 +14,11 @@
 
     <nav>
 
-      <a onclick="handleClick('#about')">About the game</a>
-      <a onclick="handleClick('#story')">The story</a>
-      <a onclick="handleClick('#we')">Who are we?</a>
+      <a onclick="handleClick('#hero')" class="logo"><span>The</span><br/>Orphanage</a>
+      |
+      <a onclick="handleClick('#about')">About the game</a> |
+      <a onclick="handleClick('#story')">The story</a> |
+      <a onclick="handleClick('#we')">Who are we?</a> |
       <a onclick="handleClick('#contact')">Contact</a>
       <a class="button" href="https://github.com/SAMPROO/textadventure-website">Download</a>
     </nav>
@@ -32,14 +34,18 @@
     <div class="wrapper">
       <div id="typed-strings">
         <span>
-          <p> <span class="cmdulr">></span> “The Orphanage” takes you on a mysterious puzzle adventure to an unknown abandoned orphanage in the early 1970’s. Here you play as a young 15-year-old girl named Claire who has oddly lost her memory. Your job is to find out what happened to your memory and what is the purpose of the orphanage. Your choices and interactions will determine the outcome of the game.</p>
-          <p> <span class="cmdulr">></span> ... </p>
-          <p> <span class="cmdulr">></span> ... </p>
-          <p> <span class="cmdulr">></span> Epic cat game 2017</p>
-          <p> <span class="blinker">|</span> </p>
+          <p> <span class="cmdulr">></span> “The Orphanage” takes you on a mysterious puzzle adventure to an unknown abandoned orphanage in the early 1970’s. ^1000 </p>
+          <p> <span class="cmdulr">></span> Here you play as a young 15-year-old girl named Claire who has oddly lost her memory. ^1000 </p>
+          <p> <span class="cmdulr">></span>  Your job is to find out what happened to your memory and what is the purpose of the orphanage. ^1000 </p>
+          <p> <span class="cmdulr">></span> Your choices and interactions will determine the outcome of the game. ^1000 </p>
+          <p> <span class="cmdulr">> </span><span class="blinker">|</span> </p>
         </span>
       </div>
-      <div class="hero">
+
+
+      <div class="hero" id="hero">
+        <p>The Orphanage</p>
+        <br>
         <span id="typed"></span>
       </div>
 
