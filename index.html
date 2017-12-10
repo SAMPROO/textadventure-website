@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>The Orphanage</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Roboto|VT323" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Roboto:400,900|VT323" rel="stylesheet">
 
     <!-- import external js - f12a2877-81df-40ba-9389-92e6a7189297 -->
     <script src="js/jquery.min.js" charset="utf-8"></script>
@@ -13,7 +13,7 @@
     <script>
     // Fade
     $(document).ready(function () {
-    setTimeout(function(){ $(".bvideo").css('opacity','1'); },2000)
+    setTimeout(function(){ $(".bvideo").css('opacity','1'); },1000)
     });
     </script>
   </head>
@@ -30,15 +30,16 @@
       <a onclick="handleClick('#play')">Play</a> |
       <a onclick="handleClick('#about')">About</a> |
       <a onclick="handleClick('#story')">Story</a> |
+      <a onclick="handleClick('#world')">Game World</a> |
       <a onclick="handleClick('#we')">Who are we?</a> |
       <a onclick="handleClick('#contact')">Contact</a>
-      <a class="button" href="https://github.com/SAMPROO/textadventure-game">Download</a>
+      <a class="button" href="textadventure-game.zip">Download</a>
     </nav>
     <script type="text/javascript">
     const handleClick = (id) => {
       console.log(id)
       $('html, body').animate({
-          scrollTop: $(id).offset().top
+          scrollTop: $(id).offset().top - 100
       }, 500);
     }
     </script>
@@ -50,7 +51,10 @@
           <span class="cmdulr">></span> ^1000 Here you play as a young 15-year-old girl named Claire who has oddly lost her memory. ^100 <br/><br/>
           <span class="cmdulr">></span> ^1000 Your job is to find out what happened to your memory and what is the purpose of the orphanage. ^100 <br/><br/>
           <span class="cmdulr">></span> ^1000 Your choices and interactions will determine the outcome of the game. ^100 <br/><br/>
+          <span class="cmdulr">> ...</span> <br/><br/>
+          <span class="cmdulr">> <a class="startNow" onclick="handleClick('#about')"> ^1000 [ Start your journey now ] </a></span> <br/><br/>
           <span class="cmdulr">> </span>
+
         </p>
 
       </div>
@@ -72,62 +76,44 @@
           cursorChar: '|',
         });
       </script>
-    <div class="terminal">
-      <div class="top-bar" id="play">Play<img class="cmd_pic" src="images/cmd_pick.jpg" alt=""></div>
-      <span>
-        <span class="cmdulr">></span><br>
-        <span class="cmdulr">></span><br>
-        <span class="cmdulr">></span><br>
-        <span class="cmdulr">></span><br>
 
-      </span>
+    <div class="area-1" id="play">
+      <h1>PLAY</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia euismod gravida. Maecenas ultrices lacus sed odio egestas commodo. Nunc vitae justo elit. Aliquam suscipit magna in pharetra rhoncus. Nulla facilisi. Quisque aliquet elit mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac ante vel libero dapibus facilisis. Nulla velit arcu, tempor ac massa at, pharetra facilisis libero.<br/> Donec eleifend tincidunt enim in imperdiet. Aenean feugiat sed sapien sed sagittis. Donec auctor facilisis libero, ut interdum urna imperdiet vel. Duis ut semper augue, quis pretium ante. Nullam vulputate purus a libero iaculis consequat. Donec odio dui, consequat eu porttitor ac, dignissim sed ex.</p>
+      
+    </div>
+
+    <div class="area-2" id="about">
+      <h1>ABOUT</h1>
+      <p>The Orphanage is a text-based adventure game developed by Sampo Tuisku, Miikka Virtanen and Matti Närhi. The game is programmed with Python and on the side, it communicates with MariaDB database. All of the functions that are meant for running the program are in Python. All the data, for example about items, is in a database, which will be fetched by the Python program. The player is meant to play the game by inputting text or numbers into the game. There is a parser in the game that runs certain functions based on the text or the numbers the player has input. The game is a part of a school project in ICT studies and its purpose is to apply skills learned in a programming course.</p>
 
     </div>
 
+    <div class="area-3" id="story">
+      <h1>STORY</h1>
+      <p>The game tells a story of a 15 years old girl named Claire who wakes up in front of a an old orphanage and she doesn't have all of her memories intact. As she explores the orphanage she'll try to solve the mystery that surrounds her and gain back her memories. The story deals with heavy subjects such as domestic violence and dealing with the demons of your past. Join Claire in solving solving the mystery of the orphanage and her amnesia.</p>
 
-
-    <div class="terminal">
-      <div class="top-bar" id="about">About<img class="cmd_pic" src="images/cmd_pick.jpg" alt=""></div>
-      <span>
-        <span class="cmdulr">></span><br>
-        <span class="cmdulr">></span><br>
-        <span class="cmdulr">></span><br>
-      </span>
     </div>
 
-    <div class="terminal">
-      <div class="top-bar" id="story">Story<img class="cmd_pic" src="images/cmd_pick.jpg" alt=""></div>
-      <span>
-        <span class="cmdulr">></span><br>
-        <span class="cmdulr">></span><br>
-        <span class="cmdulr">></span><br>
-        <span class="cmdulr">></span><br>
+    <div class="area-4" id="world">
+      <h1>GAME WORLD</h1>
+      <p>In the beginning of the game you emerge in front of a four storey abandoned building. You feel like the place is familiar and means something. You have no idea how you got here but here you are.. The surroundings are scattered with old broken toys and a rusty swing that makes an awful creak as the wind blows. The trees look dead and you feel like you're being watched..It looks like it had once bloomed with young children but now the building has gone crooked and has been swallowed by the nature and it’s creatures.<br><br>It’s dark and the air is moist. You are surrounded by woods and there is no sign of life. A full moon shimmers through the clouds that are gathering as you feel a drop of water on your nose, a storm is coming. The cold hits your skin as you slowly trudge your way through the rubble inside the building to get warmth, shelter and investigate what lies within. You get to the door and above it says “Kindred Hearts Orphanage”.</p>
 
-      </span>
     </div>
 
-    <div class="terminal">
-      <div class="top-bar" id="we">Who are we?<img class="cmd_pic" src="images/cmd_pick.jpg" alt=""></div>
-      <span>
-        <span class="cmdulr">></span><br>
-        <span class="cmdulr">></span><br>
-        <span class="cmdulr">></span><br>
-        <span class="cmdulr">></span><br>
-      </span>
+    <div class="area-5" id="we">
+      <h1>WE</h1>
+      <p>Sampo Tuisku, Miikka Virtanen and Matti Närhi, the developers of The Orphanage, are first year ICT students in Metropolia University of Applied Sciences. We began our studies in Metropolia in August 2017 and at the moment we are completing our core requirement studies. Developing a game was a project included in a theme called Games and The Orphanage is the result of that project. Duration of the studies in Metropolia University of Applied Sciences is four years and after graduating we are engineers in ICT.</p>
+
     </div>
 
-    <div class="terminal">
-      <div class="top-bar" id="contact">Contact<img class="cmd_pic" src="images/cmd_pick.jpg" alt=""></div>
-      <span>
-        <span class="cmdulr">></span><br>
-        <span class="cmdulr">></span><br>
-        <span class="cmdulr">></span><br>
-        <span class="cmdulr">></span><br>
-      </span>
+    <div class="contacts" id="contact">
+      <a class="middle">GET IN TOUCH</a><br>
+        |
+      <a>GitHub</a> |
+      <a>Email</a> |
     </div>
-
-    <div class="contacts">
-    </div>
+  </div>
 
   </body>
 </html>
