@@ -36,10 +36,11 @@ nav a:not(.logo):not(.button):hover{
   color: #C93E44;
   border-bottom: 4px solid #C93E44;
 }
+
 nav .logo {
     font-size: 1.25rem;
     font-weight: bold;
-    margin: 0 100px 0 0;
+    margin: 0 calc(5vw + 20px) 0 0;
     line-height: 0.5;
     text-align: left;
     align-items: flex-start;
@@ -50,7 +51,7 @@ nav .logo span {
   line-height: 0;
 }
 nav .button{
-  background: #0c2939;
+  background: #060606;
   margin: 0;
   height: 40px;
   padding: 10px 25px;
@@ -62,8 +63,7 @@ nav .button{
   display:flex; flex-direction:row; align-items: center;
 }
 nav .button:hover{
-  background: green;
-
+  background: #117d29;
 }
 
 .example-img{
@@ -112,7 +112,7 @@ nav .button:hover{
 .cmdulr{
   color: #eee;
 }
-.blinker{
+.typed-cursor, .blinker{
   animation-name: blink;
   animation-duration: 1s;
   animation-iteration-count: infinite;
